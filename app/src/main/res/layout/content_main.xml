@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RadioButton
+        android:id="@+id/usRb"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="32dp"
+        android:onClick="onRadioButtonClick"
+        android:text="USD to BTC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usDollar" />
+
+    <EditText
+        android:id="@+id/usDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="202dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Input US Dollars"
+        android:inputType="numberDecimal"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/usRb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/bitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="273dp"
+        android:ems="10"
+        android:hint="Input Bitcoin amount"
+        android:inputType="numberDecimal"
+        android:text="0.00029"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usRb" />
+
+    <RadioButton
+        android:id="@+id/btcRb"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="67dp"
+        android:onClick="onRadioButton2Click"
+        android:text="BTC to USD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usRb"
+        app:layout_constraintTop_toBottomOf="@+id/usDollar" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="176dp"
+        android:text="USD - BitCoin Converter"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
